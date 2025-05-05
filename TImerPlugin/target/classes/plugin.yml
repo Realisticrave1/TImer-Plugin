@@ -1,0 +1,35 @@
+name: TImerPlugin
+version: '1.0-SNAPSHOT'
+main: RavenMC.tImerPlugin.TImerPlugin
+api-version: '1.21'
+prefix: Timer Plugin
+authors: [ Realisticrave ]
+description: A plugin that displays a timer and allows players to modify it after kills with a lives system
+commands:
+  timerplugin:
+    description: Main command for timer plugin
+    usage: /timerplugin [info|settime <days>|reload|setlives|givespecial|gui]
+    permission: timerplugin.use
+  lives:
+    description: Check your remaining lives
+    usage: /lives [player]
+    permission: timerplugin.use
+  trust:
+    description: Add a player to your trusted list (exempt from time freezing)
+    usage: /trust <player>
+    permission: timerplugin.use
+  untrust:
+    description: Remove a player from your trusted list
+    usage: /untrust <player>
+    permission: timerplugin.use
+  configgui:
+    description: Open the plugin configuration GUI (admin only)
+    usage: /configgui
+    permission: timerplugin.admin
+permissions:
+  timerplugin.use:
+    description: Allows use of basic plugin commands
+    default: true
+  timerplugin.admin:
+    description: Allows use of admin commands
+    default: op
